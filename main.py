@@ -6,7 +6,6 @@ from toxicity import ToxicCommentsDetector
 from PIL import ImageDraw, Image
 from autocorrect import Speller
 import logging
-import easyocr
 
 import os
 from functools import cmp_to_key
@@ -112,7 +111,6 @@ if __name__ == '__main__':
                   'я': ['я', 'ya']}
 
     main_folder = os.getcwd()
-    reader = easyocr.Reader(['en', 'ru'], gpu=True)
     toxicDetector = ToxicCommentsDetector()
     spell = Speller(lang='ru')
 
